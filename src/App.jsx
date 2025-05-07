@@ -5,7 +5,6 @@ import Button from "./components/Button";
 import { motion } from "motion/react";
 
 const App = () => {
-
   const textVariant = {
     initial: {
       x: 0,
@@ -15,11 +14,10 @@ const App = () => {
       transition: {
         delay: i * 0.3, // i is the custom prop passed in
         duration: 1.2,
-        ease: "easeInOut"
-      }
-    })
+        ease: "easeInOut",
+      },
+    }),
   };
-  
 
   return (
     <>
@@ -39,24 +37,30 @@ const App = () => {
         {/* Content at the bottom-left */}
         <div className="absolute z-10 bottom-[10%] left-0 w-full">
           <div className="max-w-[1200px] mx-auto space-y-4">
-
             <div className="relative w-max overflow-hidden">
-              <motion.div variants={textVariant} custom={0} initial="initial" animate="animate" className="absolute inset-0 w-full min-h-full bg-white whitespace-nowrap overflow-hidden origin-left"></motion.div>
+              <motion.div
+                variants={textVariant}
+                custom={0}
+                initial="initial"
+                animate="animate"
+                className="absolute inset-0 w-full min-h-full bg-white whitespace-nowrap overflow-hidden origin-left"
+              ></motion.div>
               <h1 className="text-white text-4xl font-normal">
                 Kami Menghadirkan visual yang menggugah
               </h1>
             </div>
             <div className="relative w-max overflow-hidden">
-              <motion.div variants={textVariant} custom={0.7} initial="initial" animate="animate" className="absolute inset-0 w-full min-h-full bg-white whitespace-nowrap overflow-hidden origin-left"></motion.div>
+              <motion.div
+                variants={textVariant}
+                custom={0.7}
+                initial="initial"
+                animate="animate"
+                className="absolute inset-0 w-full min-h-full bg-white whitespace-nowrap overflow-hidden origin-left"
+              ></motion.div>
               <h1 className="text-white text-4xl font-normal">
                 dan selaras dengan cita rasa serta visi brand Anda.
               </h1>
             </div>
-
-{/*             
-            <h1 className="text-white text-4xl font-normal">
-              dan selaras dengan cita rasa serta visi brand Anda.
-            </h1> */}
           </div>
         </div>
       </section>
@@ -89,6 +93,80 @@ const App = () => {
               seperti rasa yang ingin Anda hadirkan.
             </h2>
             <Button text="PELAJARI LEBIH LANJUT" className="my-8" />
+          </div>
+        </div>
+      </section>
+
+      <section className="relative z-20 w-full min-h-screen bg-black text-white">
+        <div className="grid grid-cols-2 px-8 py-32 gap-y-6">
+          <h2 className="text-8xl col-span-2 font-semibold">PRODUK UNGGULAN</h2>
+          <h2 className="text-8xl font-semibold text-center">KAMI</h2>
+          <h2 className="text-8xl font-semibold text-center">(06)</h2>
+        </div>
+
+        <div className="grid grid-cols-2 px-8 py-12 gap-y-12">
+          <img
+            className="w-[90%]"
+            src="/images/example1.jpg"
+            alt="example-photo"
+          />
+          <img
+            className="w-[90%]"
+            src="/images/example2.png"
+            alt="example-photo"
+          />
+          <img
+            className="w-[90%]"
+            src="/images/example3.jpg"
+            alt="example-photo"
+          />
+          <img
+            className="w-[90%]"
+            src="/images/example4.jpg"
+            alt="example-photo"
+          />
+          <img
+            className="w-[90%]"
+            src="/images/example5.jpg"
+            alt="example-photo"
+          />
+          <img
+            className="w-[90%]"
+            src="/images/example6.jpg"
+            alt="example-photo"
+          />
+          <img
+            className="w-[90%]"
+            src="/images/example7.jpg"
+            alt="example-photo"
+          />
+        </div>
+      </section>
+
+      <section className="relative z-20 w-full min-h-screen bg-black text-white">
+        <div className="grid grid-cols-3 px-8 py-32">
+          <div>
+            <h2 className="font-medium">(Hasil Kami)</h2>
+            <img
+              className="w-[300px] mt-4"
+              src="/images/example8.jpeg"
+              alt="hasil-kami-photo"
+            />
+          </div>
+
+          <div className=" col-span-2">
+            <h1 className="text-6xl font-semibold leading-16">
+              {" "}
+              Halo, saya Nik Ratih, seorang fotografer makanan yang berbasis di
+              kota Pamekasan, Madura. Saya memiliki passion dalam mengabadikan
+              kelezatan makanan melalui lensa kamera.
+            </h1>
+            <h1 className="text-6xl font-semibold mt-18 leading-16">
+              {" "}
+              Dengan pengalaman dan keterampilan dalam fotografi makanan, saya
+              dapat membantu Anda menampilkan hidangan Anda dengan cara yang
+              paling menarik.
+            </h1>
           </div>
         </div>
       </section>
