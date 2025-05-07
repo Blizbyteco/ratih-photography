@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Container from "./components/Container";
 import Button from "./components/Button";
 import { motion } from "motion/react";
+import UnderlinedText from "./components/UnderlinedText";
 
 const App = () => {
   const textVariant = {
@@ -152,6 +153,18 @@ const App = () => {
               src="/images/example8.jpeg"
               alt="hasil-kami-photo"
             />
+            <div className="mt-16 space-y-8">
+              <UnderlinedText index="01" text="Fotografi Makanan" />
+              <UnderlinedText index="02" text="Fotografi Produk" />
+              <UnderlinedText index="03" text="Konsultasi Fotografi" />
+{/*               
+              <div className="flex border-b border-gray-400 max-w-[65%] pb-4">
+                <span className="text-gray-400 mr-4">(02)</span>Fotografi Produk
+              </div>
+              <div className="flex border-b border-gray-400 max-w-[65%] pb-4">
+                <span className="text-gray-400 mr-4">(03)</span>Konsultasi Fotografi
+              </div> */}
+            </div>
           </div>
 
           <div className=" col-span-2">
