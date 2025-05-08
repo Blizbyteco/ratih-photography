@@ -1,9 +1,11 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Container from "./components/Container";
-import Button from "./components/Button";
+import Navbar from "../components/Navbar";
+// import Container from "../components/Container";
+import Button from "../components/Button";
 import { motion } from "motion/react";
-import UnderlinedText from "./components/UnderlinedText";
+import UnderlinedText from "../components/UnderlinedText";
+import TextSlide from "../components/TextSlide";
+import LabeledText from "../components/LabeledText";
 
 const App = () => {
   const textVariant = {
@@ -157,7 +159,7 @@ const App = () => {
               <UnderlinedText index="01" text="Fotografi Makanan" />
               <UnderlinedText index="02" text="Fotografi Produk" />
               <UnderlinedText index="03" text="Konsultasi Fotografi" />
-{/*               
+              {/*               
               <div className="flex border-b border-gray-400 max-w-[65%] pb-4">
                 <span className="text-gray-400 mr-4">(02)</span>Fotografi Produk
               </div>
@@ -187,7 +189,9 @@ const App = () => {
       <section className="relative z-20 w-full min-h-screen bg-black text-white">
         <div className="grid grid-cols-3 px-16 py-32 gap-y-6">
           <div className="col-span-3">
-            <h1 className="text-8xl font-semibold">Mari Ciptakan Visual yang</h1>
+            <h1 className="text-8xl font-semibold">
+              Mari Ciptakan Visual yang
+            </h1>
           </div>
           <div className="col-span-3">
             <h1 className="text-8xl font-semibold">Mengunggah selera dan</h1>
@@ -196,12 +200,53 @@ const App = () => {
           <div className="col-span-2">
             <h1 className="text-8xl font-semibold">mewakili brand Anda</h1>
           </div>
-
         </div>
-          <div className="flex justify-center">
-            <Button text="Hubungi Kami" />
-          </div>
+        <div className="flex justify-center">
+          <Button text="Hubungi Kami" />
+        </div>
       </section>
+
+      <footer className="border-t border-gray-400 py-18 relative z-20 w-full min-h-[95vh] bg-black text-white">
+        <div className="grid grid-cols-4 gap-x-16 px-16">
+          <div className="flex flex-col items-center">
+            <img
+              src="/images/example8.jpeg"
+              alt="studio"
+              className="w-[300px]"
+            />
+            <img src="/images/logo.svg" alt="logo" className="w-[300px]" />
+          </div>
+
+          {/* navigations */}
+          <div className="flex flex-col">
+            <p className="text-sm">(NAVIGATION)</p>
+            <div className="mt-4 space-y-4">
+              <TextSlide text="Galeri" />
+              <TextSlide text="Layanan" />
+              <TextSlide text="Kursus" />
+              <TextSlide text="Hubungi Kami" />
+            </div>
+          </div>
+
+          <div></div>
+
+          <div className="flex flex-col">
+            <p className="text-sm">(INFORMASI)</p>
+            <div className="mt-4 space-y-4 flex flex-col justify-start">
+              <LabeledText
+                title="Lokasi"
+                content="jln. Veteran gg 6 no.20 Pamekasan, madura."
+              />
+              <LabeledText title="Email" content="nik.ratih99@gmail.com" />
+              <LabeledText title="Instagram" content="@nikratih" />
+              <LabeledText
+                title="WhatsApp"
+                content="081939334000"
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 };
