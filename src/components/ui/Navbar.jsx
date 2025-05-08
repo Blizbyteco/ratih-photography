@@ -21,8 +21,8 @@ export default function Navbar() {
 
   return (
     <motion.div variants={variants} initial="initial" animate="animate" className="absolute left-0 top-0 w-full z-20">
-      <div className="max-w-[1200px]  mx-auto flex justify-between items-center">
-        <img src="/images/logo.svg" alt="logo" className="size-[150px]" />
+      <div className="max-w-[1200px] mx-auto flex justify-between items-center py-4">
+        <img src="/images/logo.svg" alt="logo" className="aspect-video w-[150px]" />
         <div className="flex gap-x-12">
           <a href="#" className="text-white">
             Galeri
