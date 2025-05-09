@@ -7,6 +7,7 @@ import {
   useScroll,
 } from "motion/react";
 import Button from "./Button";
+import UnderlinedTextReveal from "./UnderlinedTextReveal";
 
 export default function Navbar() {
   const variants = {
@@ -46,15 +47,16 @@ export default function Navbar() {
 
   const backgroundVariants = {
     initial: {
-      y: "-100%",
+      height: 0,
       transition: {
-        duration: 0.8,
+        duration: 0.5,
         ease: easeIn,
+        delay: 1.4
       },
     },
-
+    
     animate: {
-      y: 0,
+      height: "100vh",
       transition: {
         duration: 0.8,
         ease: easeOut,
@@ -76,6 +78,7 @@ export default function Navbar() {
   });
 
   useEffect(() => {
+
     if (isActive) {
       document.body.style.overflow = "hidden";
     } else {
@@ -95,7 +98,7 @@ export default function Navbar() {
           <img
             src="/images/logo.svg"
             alt="logo"
-            className="aspect-video w-[150px]"
+            className="aspect-video w-[200px]"
           />
           <div className="flex gap-x-12">
             <a href="#" className="text-white">
@@ -115,7 +118,7 @@ export default function Navbar() {
 
       {/* fixed navbar */}
       <div className="fixed top-0 left-0 min-w-full bg-transparent z-40">
-        <div className="max-w-[1200px] mx-auto flex justify-end items-center gap-x-4 mt-8 overflow-y-hidden">
+        <div className="max-w-[1200px] mx-auto flex justify-end items-center mt-8 overflow-y-hidden">
           <motion.div
             variants={fixedNavVariants}
             initial="initial"
@@ -130,7 +133,7 @@ export default function Navbar() {
             animate={showNavBtn ? "animate" : "initial"}
             custom={2}
             onClick={() => setIsActive(true)}
-            className="flex items-center gap-x-2 bg-white text-black hover:cursor-pointer px-4 rounded-full py-2 text-sm font-semibold"
+            className="flex items-center gap-x-2 bg-white text-black hover:cursor-pointer px-4 rounded-full py-3 text-sm font-semibold"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -151,24 +154,29 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* background */}
+      {/* fixed content */}
       <motion.div
         variants={backgroundVariants}
         initial="initial"
         animate={isActive ? "animate" : "initial"}
-        className="fixed min-w-full min-h-screen top-0 left-0 bg-black z-60"
+        className="fixed min-w-full top-0 left-0 bg-white z-60 overflow-hidden"
       >
-        <div className="max-w-[1200px] mx-auto flex justify-between items-center">
+
+        <div className="max-w-[1200px] mx-auto flex justify-between items-center py-8">
           <img
-              src="/images/logo.svg"
+              src="/images/logo-light.png"
               alt="logo"
-              className="aspect-video w-[150px]"
+              className="w-[200px]"
             />
 
-            <button onClick={() => setIsActive(false)} className="text-white hover:cursor-pointer">Close</button>
+            <button onClick={() => setIsActive(false)} className="text-black hover:cursor-pointer">Close</button>
         </div>
+
+         <div className="mt-[10%]">
+            <UnderlinedTextReveal url="/" text="Galeri" state={isActive}/>
+         </div>
       </motion.div>
-      {/* background */}
+      {/* fixed content */}
     </>
   );
 }
