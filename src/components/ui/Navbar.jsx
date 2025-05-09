@@ -125,7 +125,7 @@ export default function Navbar() {
             animate={showNavBtn ? "animate" : "initial"}
             custom={1}
             >
-            <Button text="Kontak kami" />
+            <Button text="Hubungi kami" />
           </motion.div>
           <motion.button
             variants={fixedNavVariants}
