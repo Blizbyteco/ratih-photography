@@ -3,8 +3,15 @@ import TextSlide from "@/components/ui/TextSlide";
 import LabeledText from "@/components/ui/LabeledText";
 
 const Footer = () => {
+
+    const time = new Date()
+
+    const hour = time.getHours()
+    const minute = time.getMinutes()
+
+
     return (
-        <footer className="border-t border-gray-400 py-18 relative z-20 w-full min-h-[95vh] bg-black text-white">
+        <footer className="border-t border-gray-400 py-18 z-20 w-full min-h-[95vh] bg-black text-white relative">
             <div className="grid grid-cols-4 gap-x-16 px-16">
                 <div className="flex flex-col items-center">
                     <img
@@ -43,6 +50,11 @@ const Footer = () => {
                         />
                     </div>
                 </div>
+            </div>
+
+            <div className="absolute bottom-1 left-0 w-full px-16 flex justify-between items-center">
+                <p className="font-medium text-white text-sm">© 2025 Blizbyteco</p>
+                <p className="font-medium text-white text-sm">{`${hour}:${minute} ${hour >= 12 ? 'PM' : 'AM'}`} - WE ARE CLOSED</p>
             </div>
         </footer>
     )
