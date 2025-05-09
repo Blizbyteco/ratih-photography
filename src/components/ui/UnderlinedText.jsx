@@ -54,6 +54,7 @@ export default function UnderlinedText({ index, text }) {
     variants={containerVariants}
     initial="initial"
     whileInView="animate"
+    viewport={{ once: true }}
     className="border-b border-gray-400 max-w-[65%] pb-4 overflow-hidden">
         <div className="overflow-hidden flex shrink-0 flex-nowrap">
             <motion.span variants={spanVariants} initial="initial" animate="animate" className="text-gray-400 mr-4">({index})</motion.span>
