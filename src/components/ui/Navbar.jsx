@@ -112,7 +112,7 @@ export default function Navbar() {
               Layanan Kami
             </a>
           </div>
-          <Button text="Kontak kami" />
+          <Button text="Hubungi kami" />
         </div>
       </motion.div>
 
