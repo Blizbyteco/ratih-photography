@@ -101,14 +101,14 @@ export default function Navbar() {
             className="aspect-video w-[200px]"
           />
           <div className="flex gap-x-12">
-            <a href="#" className="text-white">
+            <a href="#" className="text-white relative before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-out before:h-[2px] before:bg-white">
               Galeri
               <sup className="text-sm">(6)</sup>
             </a>
-            <a href="#" className="text-white">
+            <a href="#" className="text-white relative before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-out before:h-[2px] before:bg-white">
               Kursus
             </a>
-            <a href="#" className="text-white">
+            <a href="#" className="text-white relative before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-out before:h-[2px] before:bg-white">
               Layanan Kami
             </a>
           </div>
