@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import Gallery from "./Gallery";
 import RootLayout from "../components/layouts/RootLayout";
+import Course from "./course";
+
 
 const App = () => {
   return (
@@ -10,6 +12,7 @@ const App = () => {
         <Route path="/" element={<RootLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/course" element={<Course/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
