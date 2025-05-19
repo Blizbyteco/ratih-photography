@@ -1,5 +1,6 @@
-import { motion, useMotionValue, useMotionValueEvent, useScroll, useTransform } from "motion/react"
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { motion, useScroll } from "motion/react"
+import { useRef } from "react";
+import { Helmet } from "react-helmet";
 
 export default function Gallery() {
 
@@ -11,7 +12,16 @@ export default function Gallery() {
   
 
   return (
+    <>
+      <Helmet>
+      <title>Nikratih Fotografi - Galeri</title>
+    </Helmet>
+
     <div className='w-full bg-black min-h-screen text-white overflow-auto'>
+
+       
+
+
       <section className="w-full flex justify-center items-center overflow-x-hidden min-h-[200vh]">
         {/* img container */}
         <div className="w-full overflow-x-hidden fixed bottom-4 left-0">
@@ -34,6 +44,9 @@ export default function Gallery() {
 
       </section>
     </div>
+
+    </>
+    
   )
 }
 

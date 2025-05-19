@@ -111,7 +111,7 @@ export default function Navbar() {
         <div className="max-w-[1200px] mx-auto flex justify-between items-center py-4">
           <Link to="/">
             <img
-              src="/images/logo.svg"
+              src="/images/logo-long-light.svg"
               alt="logo"
               className="aspect-video w-[200px]"
             />
