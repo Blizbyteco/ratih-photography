@@ -101,11 +101,11 @@ export default function Navbar() {
             className="aspect-video w-[200px]"
           />
           <div className="flex gap-x-12">
-            <a href="#" className="text-white">
+            <a href="/" className="text-white">
               Galeri
               <sup className="text-sm">(6)</sup>
             </a>
-            <a href="#" className="text-white">
+            <a href="/kursus" className="text-white">
               Kursus
             </a>
             <a href="#" className="text-white">
