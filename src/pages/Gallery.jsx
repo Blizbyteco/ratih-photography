@@ -1,6 +1,5 @@
 import { motion, useScroll } from "motion/react"
-import { useRef } from "react";
-import { Helmet } from "react-helmet";
+import { useEffect, useRef } from "react";
 
 export default function Gallery() {
 
@@ -9,13 +8,14 @@ export default function Gallery() {
 
 
   const containerRef = useRef()
+
+  useEffect(() => {
+    document.title = "Galeri"
+  }, [])
   
 
   return (
     <>
-      <Helmet>
-      <title>Nikratih Fotografi - Galeri</title>
-    </Helmet>
 
     <div className='w-full bg-black min-h-screen text-white overflow-auto'>
 

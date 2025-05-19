@@ -13,15 +13,15 @@ import { Link, useLocation } from "react-router-dom";
 export default function Navbar() {
   const variants = {
     initial: {
-      opacity: 0,
+      y: -100,
     },
 
     animate: {
-      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.8,
-        delay: 1.3,
-        ease: easeIn,
+        duration: 0.3,
+        delay: 1.5,
+        ease: easeOut
       },
     },
   };
@@ -121,12 +121,9 @@ export default function Navbar() {
               Galeri
               <sup className="text-sm">(6)</sup>
             </Link>
-            <a href="/kursus" className="text-white relative before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-out before:h-[2px] before:bg-white">
+            <Link to="/course" className="text-white relative before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-out before:h-[2px] before:bg-white">
               Kursus
-            </a>
-            <a href="#" className="text-white relative before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-out before:h-[2px] before:bg-white">
-              Layanan Kami
-            </a>
+            </Link>
           </div>
           <Button text="Hubungi kami" />
         </div>
