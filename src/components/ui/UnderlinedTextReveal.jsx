@@ -43,15 +43,14 @@ export default function UnderlinedTextReveal({ text, url, state }) {
   };
 
   return (
-    <motion.div
-      variants={variants.container}
-      initial="initial"
-      animate={state ? "animate" : "initial"}
-      className="border-b border-black py-4 overflow-hidden hover:bg-black hover:text-white hover:cursor-pointer transition-colors duration-200 flex flex-col items-start"
-    >
-
-      <div className="overflow-y-hidden w-[1200px] h-max mx-auto flex justify-between items-center shrink-0">
-        <Link to={url}>
+    <Link to={url}>
+      <motion.div
+        variants={variants.container}
+        initial="initial"
+        animate={state ? "animate" : "initial"}
+        className="border-b border-black py-4 overflow-hidden hover:bg-black hover:text-white hover:cursor-pointer transition-colors duration-200 flex flex-col items-start"
+      >
+        <div className="overflow-y-hidden w-[1200px] h-max mx-auto flex justify-between items-center shrink-0">
           <motion.h1
             variants={variants.text}
             initial="initial"
@@ -60,8 +59,8 @@ export default function UnderlinedTextReveal({ text, url, state }) {
           >
             {text}
           </motion.h1>
-        </Link>
-      </div>
-    </motion.div>
+        </div>
+      </motion.div>
+    </Link>
   );
 }

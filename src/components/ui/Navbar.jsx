@@ -8,6 +8,7 @@ import {
 } from "motion/react";
 import Button from "./Button";
 import UnderlinedTextReveal from "./UnderlinedTextReveal";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const variants = {
@@ -69,7 +70,15 @@ export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
   const [showNavBtn, setShowNavBtn] = useState(false);
 
+  const location = useLocation()
+
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
+
+    if (location.pathname == "/gallery") {
+      return
+    }
+
+
     if (latest < 0.05) {
       setShowNavBtn(false);
     } else {
@@ -78,6 +87,11 @@ export default function Navbar() {
   });
 
   useEffect(() => {
+
+    if (location.pathname == "/gallery") {
+      setShowNavBtn(false)
+      return
+    }
 
     if (isActive) {
       document.body.style.overflow = "hidden";
@@ -92,19 +106,21 @@ export default function Navbar() {
         variants={variants}
         initial="initial"
         animate="animate"
-        className="absolute left-0 top-0 w-full z-50"
+        className={`${location.pathname == "/gallery" ? "fixed" : "absolute"} left-0 top-0 w-full z-50`}
       >
         <div className="max-w-[1200px] mx-auto flex justify-between items-center py-4">
-          <img
-            src="/images/logo.svg"
-            alt="logo"
-            className="aspect-video w-[200px]"
-          />
+          <Link to="/">
+            <img
+              src="/images/logo.svg"
+              alt="logo"
+              className="aspect-video w-[200px]"
+            />
+          </Link>
           <div className="flex gap-x-12">
-            <a href="#" className="text-white relative before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-out before:h-[2px] before:bg-white">
+            <Link to="/gallery"  className="text-white relative before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-out before:h-[2px] before:bg-white">
               Galeri
               <sup className="text-sm">(6)</sup>
-            </a>
+            </Link>
             <a href="#" className="text-white relative before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-out before:h-[2px] before:bg-white">
               Kursus
             </a>

@@ -52,12 +52,12 @@ export default function Button({ text, className }) {
       onHoverStart={() => setParentHovered(true)}
       onHoverEnd={() => setParentHovered(false)}
     >
-      <div className="relative w-max max-h-[20px] overflow-y-hidden">
+      <div className="relative w-max max-h-[20px] overflow-y-hidden bg-white">
         <motion.p
           variants={textVariants.first}
           initial="initial"
           animate={parentHovered ? "animate" : "initial"}
-          className="text-black font-semibold text-sm whitespace-nowrap"
+          className="text-black bg-white font-semibold text-sm whitespace-nowrap"
         >
           {text}
         </motion.p>
@@ -65,7 +65,7 @@ export default function Button({ text, className }) {
           variants={textVariants.second}
           initial="initial"
           animate={parentHovered ? "animate" : "initial"}
-          className="text-black font-semibold text-sm whitespace-nowrap"
+          className="text-black bg-white font-semibold text-sm whitespace-nowrap"
         >
           {text}
         </motion.p>

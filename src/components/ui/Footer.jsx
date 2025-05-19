@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="grid grid-cols-4 gap-x-16 px-16">
                 <div className="flex flex-col items-center">
                     <img
-                        src="/images/example8.jpeg"
+                        src="/images/studio.jpeg"
                         alt="studio"
                         className="w-[300px]"
                     />
@@ -52,9 +52,19 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="absolute bottom-1 left-0 w-full px-16 flex justify-between items-center">
-                <p className="font-medium text-white text-sm">© 2025 Blizbyteco</p>
-                <p className="font-medium text-white text-sm">{`${hour}:${minute} ${hour >= 12 ? 'PM' : 'AM'}`} - WE ARE CLOSED</p>
+            <div className="absolute bottom-1 left-0 w-full px-16 flex flex-col gap-y-2 ">
+
+                <div className="min-w-full flex justify-between items-center">
+                    <p className="font-medium text-white text-sm">Instagram</p>
+                    <p className="font-medium text-white text-sm">Gmail</p>
+                    <p className="font-medium text-white text-sm">Facebook</p>
+                    <p className="font-medium text-white text-sm">WhatsApp</p>
+                </div>
+
+                <div className="flex justify-between items-center min-w-full">
+                    <p className="font-medium text-white text-sm">© 2025 Blizbyteco, All Right Reserved</p>
+                    <p className="font-medium text-white text-sm">{`${hour}:${minute} ${hour >= 12 ? 'PM' : 'AM'}`} - WE ARE CLOSED</p>
+                </div>
             </div>
         </footer>
     )
