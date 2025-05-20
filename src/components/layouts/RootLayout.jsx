@@ -5,9 +5,9 @@ import PageLoader from "../ui/PageLoader";
 export default function RootLayout() {
   return (
     <>
-        <Navbar />
-        <PageLoader />
-        <Outlet />
+      <Navbar />
+      {/* <PageLoader /> */}
+      <Outlet />
     </>
-  )
+  );
 }

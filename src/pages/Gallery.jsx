@@ -1,53 +1,33 @@
-import { motion, useScroll } from "motion/react"
+import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef } from "react";
 
 export default function Gallery() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
 
-
-  const { scrollY } = useScroll()
-
-
-  const containerRef = useRef()
+  const x = useTransform(scrollYProgress, [0, 1], ["20%", "-95%"]);
 
   useEffect(() => {
-    document.title = "Galeri"
-  }, [])
-  
+    document.title = "Galeri";
+  }, []);
 
   return (
-    <>
-
-    <div className='w-full bg-black min-h-screen text-white overflow-auto'>
-
-       
-
-
-      <section className="w-full flex justify-center items-center overflow-x-hidden min-h-[200vh]">
-        {/* img container */}
-        <div className="w-full overflow-x-hidden fixed bottom-4 left-0">
-          <motion.div ref={containerRef} style={{ x: scrollY == 0 ? 0 : -scrollY  }} className="max-w-[1200px] flex gap-x-4">
-            <img className="w-[300px]" src="/images/example.jpg" alt="example" />
-            <img className="w-[300px]" src="/images/example1.jpg" alt="example" />
-            <img className="w-[300px]" src="/images/example2.png" alt="example" />
-            <img className="w-[300px]" src="/images/example2.png" alt="example" />
-            <img className="w-[300px]" src="/images/example2.png" alt="example" />
-            <img className="w-[300px]" src="/images/example2.png" alt="example" />
-            <img className="w-[300px]" src="/images/example2.png" alt="example" />
-            <img className="w-[300px]" src="/images/example2.png" alt="example" />
-            <img className="w-[300px]" src="/images/example2.png" alt="example" />
-            <img className="w-[300px]" src="/images/example2.png" alt="example" />
-            <img className="w-[300px]" src="/images/example2.png" alt="example" />
-            <img className="w-[300px]" src="/images/example2.png" alt="example" />
-          </motion.div>
-        </div>
-
-
+    <div ref={ref} className="w-full bg-black h-[500vh] text-white">
+      <section className="w-full min-h-screen sticky top-0 flex justify-center items-center overflow-hidden">
+        <motion.div className="flex gap-4 absolute bottom-0" style={{ x }}>
+          {[1, 2, 3, 4, 5, 6, 7, 8].map((_, i) => (
+            <img
+              key={i}
+              className="w-[300px]"
+              src="/images/example.jpg"
+              alt="example"
+            />
+          ))}
+        </motion.div>
       </section>
     </div>
-
-    </>
-    
-  )
+  );
 }
-
-
