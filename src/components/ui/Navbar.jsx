@@ -122,7 +122,7 @@ export default function Navbar() {
               <sup className="text-sm">(6)</sup>
             </Link>
             <Link to="/course" className="text-white relative before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-out before:h-[2px] before:bg-white">
-              Kursus
+              Kelas
             </Link>
           </div>
           <Button text="Hubungi kami" />
