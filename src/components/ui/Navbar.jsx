@@ -177,7 +177,7 @@ export default function Navbar() {
 
         <div className="max-w-[1200px] mx-auto flex justify-between items-center py-8">
           <img
-              src="/images/logo-light.png"
+              src="/images/logo-long-dark.png"
               alt="logo"
               className="w-[200px]"
             />
