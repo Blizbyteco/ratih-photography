@@ -6,7 +6,7 @@ const Result = () => {
         <section className="relative z-20 w-full min-h-screen bg-black text-white">
             <div className="grid grid-cols-3 px-8 py-32">
                 <div>
-                    <h2 className="font-medium">(Hasil Kami)</h2>
+                    <h2 className="font-medium">(implementasi Kami)</h2>
                     <img
                         className="w-[300px] mt-4"
                         src="/images/example8.jpeg"
