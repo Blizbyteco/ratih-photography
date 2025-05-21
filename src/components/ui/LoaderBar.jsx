@@ -1,11 +1,12 @@
 import { motion, useAnimation } from "motion/react"
 import { useEffect } from "react"
 
-export default function LoaderBar() {
+export default function LoaderBar({ animationCompleteCallback }) {
 
     const control = useAnimation()
 
     useEffect(() => {
+
         const seq = async () => {
             await control.start({
                 width: "10%",
@@ -31,12 +32,14 @@ export default function LoaderBar() {
                     delay: 0.2
                 }
             })
+
+            animationCompleteCallback()
         }
 
         seq()
     }, [control])
 
   return (
-    <motion.div initial={{ width: 0 }} animate={control} className="absolute left-0 bottom-0 bg-white z-999 h-[5px]"></motion.div>
+    <motion.div initial={{ width: 0 }} animate={control} className="absolute left-0 top-0 bg-white z-999 h-[5px]"></motion.div>
   )
 }
