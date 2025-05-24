@@ -1,6 +1,5 @@
 import React from "react";
-import Button from "../ui/Button";
-import CardPaket from "../ui/CardPaket";
+import PricingCard from "../ui/PricingCard";
 
 export default function Detail() {
   const dataPaket = [
@@ -12,7 +11,7 @@ export default function Detail() {
         "Background Polos (Putih/Hitam)",
         "Editing Dasar",
         "Resolusi Siap Upload",
-        "🕒 Estimasi: 1 hari kerja",
+        "Estimasi: 1 hari kerja",
       ],
       text: "Pesan Sekarang",
     },
@@ -24,7 +23,7 @@ export default function Detail() {
         "2 Konsep background atau properti",
         "Editing warna Dan pencahayaan",
         "File High-Res + Web Ready",
-        "🕒 Estimasi pengerjaan: 4–5 hari kerja",
+        "Estimasi pengerjaan: 4–5 hari kerja",
       ],
       text: "Pesan Sekarang",
     },
@@ -36,7 +35,7 @@ export default function Detail() {
         "3 Konsep Styling (flatlay, lifestyle, close-up)",
         "Properti + Model tangan/pengguna",
         "Retouching detail & versi sosial media",
-        "🕒 Estimasi pengerjaan: 4–5 hari kerja",
+        "Estimasi pengerjaan: 4–5 hari kerja",
       ],
       text: "Pesan Sekarang",
     },
@@ -55,7 +54,7 @@ export default function Detail() {
       {/* Grid Paket */}
       <div className="grid md:grid-cols-3  gap-5 px-4 py-12">
         {dataPaket.map((paket, index) => (
-          <CardPaket
+          <PricingCard
             key={index}
             title={paket.title}
             price={paket.price}

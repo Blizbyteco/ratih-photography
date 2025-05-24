@@ -1,8 +1,6 @@
-import React from "react";
-import CardPaket from "../ui/CardPaket";
-import Button from "../ui/Button";
+import PricingCard from "../ui/PricingCard";
 
-export default function Kelas() {
+export default function Detail() {
   const DataKelas = [
     {
       title: "Online",
@@ -31,7 +29,7 @@ export default function Kelas() {
       {/* Grid Paket */}
       <div className="grid md:grid-cols-2 gap-5 px-4 py-12">
         {DataKelas.map((paket, index) => (
-          <CardPaket
+          <PricingCard
             key={index}
             title={paket.title}
             price={paket.price}

@@ -2,16 +2,17 @@ import React from "react";
 
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
-import Detail from "../components/course/Detail";
+import Detail from "../components/service/Detail";
 
-const Course = () => {
+
+const Service = () => {
   return (
     <>
       <Navbar />
-     <Detail />
+      <Detail />
       <Footer />
     </>
   );
 };
 
-export default Course;
+export default Service;
