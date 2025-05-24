@@ -1,6 +1,7 @@
 import Footer from "@/components/ui/Footer";
 import Detail from "../components/course/Detail";
 import { useEffect } from "react";
+import Navbar from "../components/ui/Navbar";
 
 const Course = () => {
 
@@ -10,8 +11,9 @@ const Course = () => {
 
   return (
     <>
-        <Detail/>
-        <Footer/>
+      <Navbar />
+     <Detail />
+      <Footer />
     </>
   );
 };

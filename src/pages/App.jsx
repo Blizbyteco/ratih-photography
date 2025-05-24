@@ -3,6 +3,7 @@ import Home from "./Home";
 import Gallery from "./Gallery";
 import RootLayout from "../components/layouts/RootLayout";
 import Course from "./Course";
+import Service from "./Service";
 
 
 const App = () => {
@@ -12,7 +13,8 @@ const App = () => {
         <Route path="/" element={<RootLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/kelas" element={<Course/>}/>
+          <Route path="/course" element={<Course/>}/>
+          <Route path="/service" element={<Service />}/>
         </Route>
       </Routes>
     </BrowserRouter>

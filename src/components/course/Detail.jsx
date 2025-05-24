@@ -1,41 +1,43 @@
-import React from "react";
-import Button from "../ui/Button";
-import CardPaket from "../ui/CardPaket";
+import PricingCard from "../ui/PricingCard";
 
 export default function Detail() {
-  const dataPaket = [
+  const DataKelas = [
     {
       title: "Online",
-      price: "Rp100K selama 4 hari, via WhatsAppGroup",
-      features: ["Lighting & Editing", "Studi kasus", "E-sertifikat"],
+      price: "Rp 100.000 / Bulan",
+      features: ["Pembelajaran Secara langsung", "Group WhatsApp"],
+      text: "Daftar Sekarang",
     },
     {
       title: "Offline",
-      price: "Rp250K selama 3 jam, 2 kali pertemuan",
-      features: ["Lighting & Editing", "Studi kasus", "E-sertifikat"],
+      price: "Rp 250.000 / Bulan",
+      features: ["Lighting & Editing", "Studi kasus"],
+      text: "Daftar Sekarang",
     },
   ];
 
   return (
-    <div className="col-span-2 bg-black items-center justify-center pt-50 flex flex-col">
+    <section className="col-span-2 bg-black items-center justify-center pt-50 flex flex-col">
       <h1 className="text-6xl font-bold text-white text-center max-w-250">
-        Pilih Paket yang pas untuk Momenmu..
+        Temukan Paket Kursus yang Sesuai dengan Gaya Belajarmu
       </h1>
-      <p className="font-semibold text-gray-400 text-3xl mt-10">
-        Ratih hadir untuk segala kebutuhan fotografi.
+      <p className="font-semibold text-gray-400 text-2xl mt-10 text-center w-270">
+        Kami menyediakan berbagai pilihan paket belajar baik online maupun
+        offline yang bisa disesuaikan dengan waktu dan kebutuhanmu
       </p>
 
       {/* Grid Paket */}
       <div className="grid md:grid-cols-2 gap-5 px-4 py-12">
-        {dataPaket.map((paket, index) => (
-          <CardPaket
+        {DataKelas.map((paket, index) => (
+          <PricingCard
             key={index}
             title={paket.title}
             price={paket.price}
             features={paket.features}
+            text={paket.text}
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
