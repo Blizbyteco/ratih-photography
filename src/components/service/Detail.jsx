@@ -44,15 +44,14 @@ export default function Detail() {
   return (
     <section className="col-span-2 bg-black items-center justify-center pt-50 flex flex-col">
       <h1 className="text-6xl font-bold text-white text-center max-w-250">
-        Paket Foto Produk Eksklusif dari Ratih
+        Tampil Keren Bareng Paket Eksklusif
       </h1>
-      <p className="font-semibold text-gray-400 text-2xl mt-10">
-        Kami hadir dengan pilihan paket fotografi produk yang disesuaikan dengan
-        kebutuhan brand-mu.
+      <p className=" text-gray-400 text-xl mt-8">
+        Upgrade Tampilan Produkmu dengan Paket Foto Eksklusif dari kami!
       </p>
 
       {/* Grid Paket */}
-      <div className="grid md:grid-cols-3  gap-5 px-4 py-12">
+      <div className="grid md:grid-cols-3  gap-5 px-4 py-32">
         {dataPaket.map((paket, index) => (
           <PricingCard
             key={index}

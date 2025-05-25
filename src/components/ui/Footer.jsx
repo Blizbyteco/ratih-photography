@@ -12,14 +12,14 @@ const Footer = () => {
 
     return (
         <footer className="border-t border-gray-400 py-18 z-20 w-full min-h-[95vh] bg-black text-white relative">
-            <div className="grid grid-cols-4 gap-x-16 px-16">
-                <div className="flex flex-col items-center">
+            <div className="grid grid-rows-2 grid-cols-4 gap-x-16 px-16">
+                <div className="flex flex-col items-start justify-between row-span-2">
                     <img
                         src="/images/studio.jpeg"
                         alt="studio"
                         className="w-[300px]"
                     />
-                    <img src="/images/logo.svg" alt="logo" className="w-[300px]" />
+                    <img src="/images/logo-light.svg" alt="logo" className="w-[200px]" />
                 </div>
 
                 {/* navigations */}

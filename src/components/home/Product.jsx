@@ -11,14 +11,11 @@ const Product = () => {
       </div>
 
       <div className="grid grid-cols-2 px-8 py-12 gap-y-12">
-        <ImageCursorScale url="/images/example1.jpg" cursorText="Risoles" />
-
-        <ImageCursorScale url="/images/example2.png" cursorText="Example 2" />
-        <ImageCursorScale url="/images/example3.jpg" cursorText="Example 3" />
-        <ImageCursorScale url="/images/example4.jpg" cursorText="Example 4" />
-        <ImageCursorScale url="/images/example5.jpg" cursorText="Example 5" />
-        <ImageCursorScale url="/images/example6.jpg" cursorText="Example 6" />
-        <ImageCursorScale url="/images/example7.jpg" cursorText="Example 7" />
+        <ImageCursorScale url="/images/implement-1.jpeg" cursorText="Risoles" />
+        <ImageCursorScale url="/images/implement-2.jpeg" cursorText="Example 2" />
+        <ImageCursorScale url="/images/implement-3.jpeg" cursorText="Example 3" />
+        <ImageCursorScale url="/images/implement-4.jpeg" cursorText="Example 4" />
+        <ImageCursorScale url="/images/implement-5.jpeg" cursorText="Example 5" />
       </div>
     </section>
   );

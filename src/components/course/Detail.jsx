@@ -19,10 +19,10 @@ export default function Detail() {
   return (
     <section className="col-span-2 bg-black items-center justify-center pt-50 flex flex-col">
       <h1 className="text-6xl font-bold text-white text-center max-w-250">
-        Temukan Paket Kursus yang Sesuai dengan Gaya Belajarmu
+        Kepengen belajar foto produk?
       </h1>
-      <p className="font-semibold text-gray-400 text-2xl mt-10 text-center w-270">
-        Kami menyediakan berbagai pilihan paket belajar baik online maupun
+      <p className="text-gray-400 text-xl mt-8 text-center w-270">
+        Tenang aja, kami menyediakan berbagai pilihan paket belajar baik online maupun
         offline yang bisa disesuaikan dengan waktu dan kebutuhanmu
       </p>
 
