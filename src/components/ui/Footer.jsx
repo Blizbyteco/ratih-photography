@@ -1,6 +1,7 @@
 import React from "react";
 import TextSlide from "@/components/ui/TextSlide";
 import LabeledText from "@/components/ui/LabeledText";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 const Footer = () => {
 
@@ -41,10 +42,12 @@ const Footer = () => {
                         <LabeledText
                             title="Lokasi"
                             content="jln. Veteran gg 6 no.20 Pamekasan, madura."
+                            icon={<Icon icon="heroicons:map-pin-16-solid" width="16" height="16" />}
                         />
-                        <LabeledText title="Email" content="nik.ratih99@gmail.com" />
-                        <LabeledText title="Instagram" content="@nikratih" />
+                        <LabeledText icon={<Icon icon="material-symbols:alternate-email" width="16" height="16" />} title="Email" content="nik.ratih99@gmail.com" />
+                        <LabeledText icon={<Icon icon="ant-design:instagram-filled" width="16" height="16" />} title="Instagram" content="@nikratih" />
                         <LabeledText
+                            icon={<Icon icon="ant-design:whats-app-outlined" width="16" height="16" />}
                             title="WhatsApp"
                             content="081939334000"
                         />
