@@ -26,7 +26,7 @@ export default function RootLayout() {
   return (
     <>
       <Navbar />
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         {showLoader && (
           <PageLoader animationCompleteCallback={onAnimationComplete} />
         )}
