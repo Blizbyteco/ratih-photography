@@ -1,20 +1,55 @@
-import { motion, useMotionTemplate, useMotionValue, useMotionValueEvent, useScroll, useTransform } from "motion/react";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
-export default function Gallery() {
 
-  const [percentage, setPercentage] = useState(0)
+const imageToShow = [
+  "/images/example.jpg",
+  "/images/example1.jpg",
+  "/images/example2.png",
+  "/images/example3.jpg",
+  "/images/example4.jpg",
+  "/images/example5.jpg",
+  "/images/example6.jpg",
+  "/images/example7.jpg",
+  "/images/example8.jpg",
+]
+
+export default function Gallery() {
+  const [percentage, setPercentage] = useState(0);
+  const [previewing, setPreviewing] = useState(null);
+
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
 
+  const previewVariants = {
+    initial: {
+      opacity: 0,
+    },
+
+    animate: {
+      opacity: 1,
+    },
+  };
 
   const x = useTransform(scrollYProgress, [0, 1], ["40%", `-150%`]);
-  const progressPercentage = useTransform(scrollYProgress, [0.2, 0.8], [0, 100])
+  const progressPercentage = useTransform(
+    scrollYProgress,
+    [0.2, 0.8],
+    [0, 100]
+  );
 
-  useMotionValueEvent(progressPercentage, "change", (latest) => setPercentage(Math.round(latest.toFixed(1))))
+  useMotionValueEvent(progressPercentage, "change", (latest) =>
+    setPercentage(Math.round(latest.toFixed(1)))
+  );
 
   useEffect(() => {
     document.title = "Galeri";
@@ -22,25 +57,50 @@ export default function Gallery() {
 
   return (
     <div ref={ref} className="w-full bg-black h-[500vh] text-white">
-      <section className="w-full min-h-screen sticky top-0 flex justify-center items-center overflow-hidden">
+      {previewing && (
+        <motion.div
+          variants={previewVariants}
+          initial="initial"
+          animate="animate"
+          className="fixed left-0 top-0 z-60  w-full min-h-full flex justify-center items-center"
+          // layoutId={`photo-${previewing}`}
+        >
+          <div
+            onClick={() => setPreviewing(null)}
+            className="absolute left-0 top-0 bg-black/70 w-full min-h-full"
+          />
 
+          <motion.img
+            className="w-[350px] z-20"
+            src={previewing}
+            alt="example"
+          />
+        </motion.div>
+      )}
+
+      <section className="w-full min-h-screen sticky top-0 flex justify-center items-center overflow-hidden">
         <div className="absolute bottom-0 left-[120px] flex items-end gap-x-32 w-full">
           <h1 className="text-6xl font-semibold">HASIL POTRET</h1>
 
-          <p className="text-sm text-white font-light">SCROLL KE BAWAH ({percentage}%)</p>
-
+          <p className="text-sm text-white font-light">
+            SCROLL KE BAWAH ({percentage}%)
+          </p>
         </div>
 
-        <motion.div className="flex gap-4 absolute top-1/4" style={{ x }}>
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((_, i) => (
-            <img
-              key={i}
-              className="w-[350px]"
-              src="/images/example.jpg"
-              alt="example"
-            />
-          ))}
-        </motion.div>
+        <AnimatePresence>
+          <motion.div className="flex gap-4 absolute top-1/4" style={{ x }}>
+            {imageToShow.map((url, i) => (
+              <motion.img
+                onClick={() => setPreviewing(url)}
+                key={i}
+                // layoutId={`photo-${previewing}`}
+                className="w-[350px]"
+                src={url}
+                alt="example"
+              />
+            ))}
+          </motion.div>
+        </AnimatePresence>
       </section>
     </div>
   );
