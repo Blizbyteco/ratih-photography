@@ -4,10 +4,10 @@ import { motion } from "motion/react";
 const Hero = () => {
   const textVariant = {
     initial: {
-      x: 0,
+      y: 100,
     },
     animate: (i) => ({
-      x: "100%",
+      y: 0,
       transition: {
         delay: i * 0.3,
         duration: 1.2,
@@ -25,29 +25,28 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black/75" />
         <div className="absolute z-10 bottom-[10%] left-0 w-full">
           <div className="max-w-[1200px] mx-auto space-y-4">
-            <div className="relative w-max overflow-hidden py-1">
-              <motion.div
+            <div className="overflow-y-hidden">
+              <motion.h1
                 variants={textVariant}
+                initial="initial"
+                animate="animate"
                 custom={0}
-                initial="initial"
-                animate="animate"
-                className="absolute inset-0 w-full min-h-full bg-white whitespace-nowrap overflow-hidden origin-left"
-              ></motion.div>
-              <h1 className="text-white text-4xl font-normal">
+                className="text-white text-4xl font-normal"
+              >
                 Kami Menghadirkan visual yang menggugah
-              </h1>
+              </motion.h1>
             </div>
-            <div className="relative w-max overflow-hidden py-1">
-              <motion.div
+
+            <div className="overflow-y-hidden">
+              <motion.h1
                 variants={textVariant}
-                custom={0.7}
                 initial="initial"
                 animate="animate"
-                className="absolute inset-0 w-full min-h-full bg-white whitespace-nowrap overflow-hidden origin-left"
-              ></motion.div>
-              <h1 className="text-white text-4xl font-normal">
+                custom={1}
+                className="text-white text-4xl font-normal"
+              >
                 dan selaras dengan cita rasa serta visi brand Anda.
-              </h1>
+              </motion.h1>
             </div>
           </div>
         </div>
