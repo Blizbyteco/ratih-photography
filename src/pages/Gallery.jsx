@@ -92,7 +92,7 @@ export default function Gallery() {
             {imageToShow.map((url, i) => (
               <motion.img
                 onClick={() => setPreviewing(url)}
-                key={i}
+                key={`image-${i}`}
                 // layoutId={`photo-${previewing}`}
                 className="w-[350px]"
                 src={url}
