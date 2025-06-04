@@ -19,17 +19,16 @@ export default function RootLayout() {
   const onAnimationComplete = () => {
     setCurrentPath(location.pathname);
 
-    setTimeout(() => setShowLoader(false), 1000)
-    
+    setTimeout(() => setShowLoader(false), 1000);
   };
 
   return (
     <>
       <Navbar />
       <AnimatePresence>
-        {showLoader && (
+        {/* {showLoader && (
           <PageLoader animationCompleteCallback={onAnimationComplete} />
-        )}
+        )} */}
         <Outlet />
       </AnimatePresence>
     </>

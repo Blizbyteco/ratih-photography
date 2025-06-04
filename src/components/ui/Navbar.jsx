@@ -21,7 +21,7 @@ export default function Navbar() {
       transition: {
         duration: 0.3,
         delay: 1.5,
-        ease: easeOut
+        ease: easeOut,
       },
     },
   };
@@ -41,7 +41,7 @@ export default function Navbar() {
       transition: {
         duration: 0.5,
         ease: easeOut,
-        delay: (i / 10) + 0.3,
+        delay: i / 10 + 0.3,
       },
     }),
   };
@@ -52,10 +52,10 @@ export default function Navbar() {
       transition: {
         duration: 0.5,
         ease: easeIn,
-        delay: 1.4
+        delay: 1.4,
       },
     },
-    
+
     animate: {
       height: "100vh",
       transition: {
@@ -70,14 +70,12 @@ export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
   const [showNavBtn, setShowNavBtn] = useState(false);
 
-  const location = useLocation()
+  const location = useLocation();
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-
     if (location.pathname == "/gallery") {
-      return
+      return;
     }
-
 
     if (latest < 0.05) {
       setShowNavBtn(false);
@@ -87,10 +85,9 @@ export default function Navbar() {
   });
 
   useEffect(() => {
-
     if (location.pathname == "/gallery") {
-      setShowNavBtn(false)
-      return
+      setShowNavBtn(false);
+      return;
     }
 
     if (isActive) {
@@ -106,25 +103,36 @@ export default function Navbar() {
         variants={variants}
         initial="initial"
         animate="animate"
-        className={`${location.pathname == "/gallery" ? "fixed" : "absolute"} left-0 top-0 w-full z-50`}
+        className={`${
+          location.pathname == "/gallery" ? "fixed" : "absolute"
+        } left-0 top-0 w-full z-50`}
       >
-        <div className="max-w-[1200px] mx-auto flex justify-between items-center py-4">
+        <div className="max-w-[1200px] mx-auto flex justify-between items-center py-4 px-6">
           <Link to="/">
             <img
               src="/images/logo-long-light.svg"
               alt="logo"
-              className="aspect-video w-[200px]"
+              className="aspect-video w-[100px] sm:w-[200px]"
             />
           </Link>
-          <div className="flex gap-x-12">
-            <Link to="/gallery"  className="text-white relative before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-out before:h-[2px] before:bg-white">
+          <div className="hidden sm:flex gap-x-12">
+            <Link
+              to="/gallery"
+              className="text-white relative before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-out before:h-[2px] before:bg-white"
+            >
               Galeri
               <sup className="text-sm">(6)</sup>
             </Link>
-            <Link to="/course" className="text-white relative before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-out before:h-[2px] before:bg-white">
+            <Link
+              to="/course"
+              className="text-white relative before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-out before:h-[2px] before:bg-white"
+            >
               Kelas
             </Link>
-            <Link to="/service" className="text-white relative before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-out before:h-[2px] before:bg-white">
+            <Link
+              to="/service"
+              className="text-white relative before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-out before:h-[2px] before:bg-white"
+            >
               Layanan
             </Link>
           </div>
@@ -134,13 +142,13 @@ export default function Navbar() {
 
       {/* fixed navbar */}
       <div className="fixed top-0 left-0 min-w-full bg-transparent z-40">
-        <div className="max-w-[1200px] mx-auto flex justify-end items-center mt-8 overflow-y-hidden">
+        <div className="max-w-[1200px] mx-auto flex gap-2 justify-end items-center mt-4 sm:mt-8 overflow-y-hidden">
           <motion.div
             variants={fixedNavVariants}
             initial="initial"
             animate={showNavBtn ? "animate" : "initial"}
             custom={1}
-            >
+          >
             <Button text="Hubungi kami" />
           </motion.div>
           <motion.button
@@ -177,20 +185,24 @@ export default function Navbar() {
         animate={isActive ? "animate" : "initial"}
         className="fixed min-w-full top-0 left-0 bg-white z-60 overflow-hidden"
       >
-
         <div className="max-w-[1200px] mx-auto flex justify-between items-center py-8">
           <img
-              src="/images/logo-long-dark.png"
-              alt="logo"
-              className="w-[200px]"
-            />
+            src="/images/logo-long-dark.png"
+            alt="logo"
+            className="w-[200px]"
+          />
 
-            <button onClick={() => setIsActive(false)} className="text-black hover:cursor-pointer">Close</button>
+          <button
+            onClick={() => setIsActive(false)}
+            className="text-black hover:cursor-pointer"
+          >
+            Close
+          </button>
         </div>
 
-         <div className="mt-[10%]">
-            <UnderlinedTextReveal url="/" text="Galeri" state={isActive}/>
-         </div>
+        <div className="mt-[10%]">
+          <UnderlinedTextReveal url="/" text="Galeri" state={isActive} />
+        </div>
       </motion.div>
       {/* fixed content */}
     </>

@@ -7,7 +7,6 @@ import {
 } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
-
 const imageToShow = [
   "/images/example.jpg",
   "/images/example1.jpg",
@@ -17,8 +16,7 @@ const imageToShow = [
   "/images/example5.jpg",
   "/images/example6.jpg",
   "/images/example7.jpg",
-  "/images/example8.jpg",
-]
+];
 
 export default function Gallery() {
   const [percentage, setPercentage] = useState(0);
@@ -40,7 +38,7 @@ export default function Gallery() {
     },
   };
 
-  const x = useTransform(scrollYProgress, [0, 1], ["40%", `-150%`]);
+  const x = useTransform(scrollYProgress, [0, 1], ["40%", `-130%`]);
   const progressPercentage = useTransform(
     scrollYProgress,
     [0.2, 0.8],
@@ -63,7 +61,6 @@ export default function Gallery() {
           initial="initial"
           animate="animate"
           className="fixed left-0 top-0 z-60  w-full min-h-full flex justify-center items-center"
-          // layoutId={`photo-${previewing}`}
         >
           <div
             onClick={() => setPreviewing(null)}
@@ -71,7 +68,7 @@ export default function Gallery() {
           />
 
           <motion.img
-            className="w-[350px] z-20"
+            className="w-[350px] z-20 object-cover"
             src={previewing}
             alt="example"
           />
@@ -79,21 +76,21 @@ export default function Gallery() {
       )}
 
       <section className="w-full min-h-screen sticky top-0 flex justify-center items-center overflow-hidden">
-        <div className="absolute bottom-0 left-[120px] flex items-end gap-x-32 w-full">
-          <h1 className="text-6xl font-semibold">HASIL POTRET</h1>
-
-          <p className="text-sm text-white font-light">
+        <div className="absolute bottom-0">
+          <p className="text-lg text-white font-medium">
             SCROLL KE BAWAH ({percentage}%)
           </p>
         </div>
 
         <AnimatePresence>
-          <motion.div className="flex gap-4 absolute top-1/4" style={{ x }}>
+          <motion.div
+            className="flex gap-4 absolute top-1/5 sm:top-1/4"
+            style={{ x }}
+          >
             {imageToShow.map((url, i) => (
               <motion.img
                 onClick={() => setPreviewing(url)}
                 key={`image-${i}`}
-                // layoutId={`photo-${previewing}`}
                 className="w-[350px]"
                 src={url}
                 alt="example"

@@ -4,73 +4,110 @@ import LabeledText from "@/components/ui/LabeledText";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 const Footer = () => {
+  const time = new Date();
 
-    const time = new Date()
+  const hour = time.getHours();
+  const minute = time.getMinutes();
 
-    const hour = time.getHours()
-    const minute = time.getMinutes()
+  return (
+    <footer className="border-t border-gray-400 py-18 z-20 w-full min-h-[120vh] sm:min-h-screen bg-black text-white relative">
+      <div className="grid grid-rows-2 grid-cols-1 sm:grid-cols-4 gap-x-16 gap-y-8 px-6 sm:px-16">
+        <div className="flex flex-col items-start justify-between row-span-2">
+          <img
+            src="/images/studio.jpeg"
+            alt="studio"
+            className="w-[300px] hidden sm:block"
+          />
+          <img
+            src="/images/logo-light.svg"
+            alt="logo"
+            className="w-[200px] hidden sm:block"
+          />
+        </div>
 
+        {/* navigations */}
+        <div className="flex flex-col">
+          <p className="text-sm">(NAVIGATION)</p>
+          <div className="mt-4 space-y-0 sm:space-y-4">
+            <TextSlide text="Galeri" />
+            <TextSlide text="Layanan" />
+            <TextSlide text="Kursus" />
+            <TextSlide text="Hubungi Kami" />
+          </div>
+        </div>
 
-    return (
-        <footer className="border-t border-gray-400 py-18 z-20 w-full min-h-[95vh] bg-black text-white relative">
-            <div className="grid grid-rows-2 grid-cols-4 gap-x-16 px-16">
-                <div className="flex flex-col items-start justify-between row-span-2">
-                    <img
-                        src="/images/studio.jpeg"
-                        alt="studio"
-                        className="w-[300px]"
-                    />
-                    <img src="/images/logo-light.svg" alt="logo" className="w-[200px]" />
-                </div>
+        <div className="hidden sm:block"></div>
 
-                {/* navigations */}
-                <div className="flex flex-col">
-                    <p className="text-sm">(NAVIGATION)</p>
-                    <div className="mt-4 space-y-4">
-                        <TextSlide text="Galeri" />
-                        <TextSlide text="Layanan" />
-                        <TextSlide text="Kursus" />
-                        <TextSlide text="Hubungi Kami" />
-                    </div>
-                </div>
+        <div className="flex flex-col">
+          <p className="text-sm">(INFORMASI)</p>
+          <div className="mt-4 space-y-4 flex flex-col justify-start">
+            <LabeledText
+              title="Lokasi"
+              content="jln. Veteran gg 6 no.20 Pamekasan, madura."
+              icon={
+                <Icon
+                  icon="heroicons:map-pin-16-solid"
+                  width="16"
+                  height="16"
+                />
+              }
+            />
+            <LabeledText
+              icon={
+                <Icon
+                  icon="material-symbols:alternate-email"
+                  width="16"
+                  height="16"
+                />
+              }
+              title="Email"
+              content="nik.ratih99@gmail.com"
+            />
+            <LabeledText
+              icon={
+                <Icon
+                  icon="ant-design:instagram-filled"
+                  width="16"
+                  height="16"
+                />
+              }
+              title="Instagram"
+              content="@nikratih"
+            />
+            <LabeledText
+              icon={
+                <Icon
+                  icon="ant-design:whats-app-outlined"
+                  width="16"
+                  height="16"
+                />
+              }
+              title="WhatsApp"
+              content="081939334000"
+            />
+          </div>
+        </div>
+      </div>
 
-                <div></div>
+      <div className="absolute bottom-0 left-0 w-full px-6 sm:px-16 py-6 flex flex-col gap-y-2 ">
+        <div className="min-w-full flex justify-between items-center">
+          <p className="font-medium text-white text-sm">Instagram</p>
+          <p className="font-medium text-white text-sm">Gmail</p>
+          <p className="font-medium text-white text-sm">Facebook</p>
+          <p className="font-medium text-white text-sm">WhatsApp</p>
+        </div>
 
-                <div className="flex flex-col">
-                    <p className="text-sm">(INFORMASI)</p>
-                    <div className="mt-4 space-y-4 flex flex-col justify-start">
-                        <LabeledText
-                            title="Lokasi"
-                            content="jln. Veteran gg 6 no.20 Pamekasan, madura."
-                            icon={<Icon icon="heroicons:map-pin-16-solid" width="16" height="16" />}
-                        />
-                        <LabeledText icon={<Icon icon="material-symbols:alternate-email" width="16" height="16" />} title="Email" content="nik.ratih99@gmail.com" />
-                        <LabeledText icon={<Icon icon="ant-design:instagram-filled" width="16" height="16" />} title="Instagram" content="@nikratih" />
-                        <LabeledText
-                            icon={<Icon icon="ant-design:whats-app-outlined" width="16" height="16" />}
-                            title="WhatsApp"
-                            content="081939334000"
-                        />
-                    </div>
-                </div>
-            </div>
+        <div className="flex justify-between items-center min-w-full">
+          <p className="font-medium text-white text-xs sm:text-sm">
+            © 2025 Blizbyteco, All Right Reserved
+          </p>
+          <p className="font-medium text-white text-xs sm:text-sm">
+            22:00 - WE ARE CLOSED
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
-            <div className="absolute bottom-1 left-0 w-full px-16 flex flex-col gap-y-2 ">
-
-                <div className="min-w-full flex justify-between items-center">
-                    <p className="font-medium text-white text-sm">Instagram</p>
-                    <p className="font-medium text-white text-sm">Gmail</p>
-                    <p className="font-medium text-white text-sm">Facebook</p>
-                    <p className="font-medium text-white text-sm">WhatsApp</p>
-                </div>
-
-                <div className="flex justify-between items-center min-w-full">
-                    <p className="font-medium text-white text-sm">© 2025 Blizbyteco, All Right Reserved</p>
-                    <p className="font-medium text-white text-sm">{`${hour}:${minute} ${hour >= 12 ? 'PM' : 'AM'}`} - WE ARE CLOSED</p>
-                </div>
-            </div>
-        </footer>
-    )
-}
-
-export default Footer
+export default Footer;
