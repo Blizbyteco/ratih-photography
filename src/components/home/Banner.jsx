@@ -17,7 +17,7 @@ const Banner = () => {
         </div>
         <div className="hidden sm:block"></div>
         <div className="col-span-3 sm:col-span-2">
-          <h1 className="text-3xl sm:text-8xl font-semibold">
+          <h1 className="text-3xl sm:text-8xl font-semibold text-wrap xl:text-nowrap">
             Mewakili Brand Anda
           </h1>
         </div>

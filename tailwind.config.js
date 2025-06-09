@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['Poppins', ...defaultTheme.fontFamily.sans],
+        lora: ['Lora', ...defaultTheme.fontFamily.sans]
       },
       fontWeight: {
         regular: '400',

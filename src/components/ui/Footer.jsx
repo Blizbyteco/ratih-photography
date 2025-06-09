@@ -13,11 +13,7 @@ const Footer = () => {
     <footer className="border-t border-gray-400 py-18 z-20 w-full min-h-[120vh] sm:min-h-screen bg-black text-white relative">
       <div className="grid grid-rows-2 grid-cols-1 sm:grid-cols-4 gap-x-16 gap-y-8 px-6 sm:px-16">
         <div className="flex flex-col items-start justify-between row-span-2">
-          <img
-            src="/images/studio.jpeg"
-            alt="studio"
-            className="w-[300px] hidden sm:block"
-          />
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63337.81971337706!2d113.40555314863279!3d-7.170571299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd77dbd0455ddf7%3A0x88844674f378370b!2sRumah%20kreatif%20Nik%20Ratih!5e0!3m2!1sid!2sid!4v1749428799965!5m2!1sid!2sid" className="border-none w-full h-[400px]  md:w-[320px] md:h-[300px]" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
           <img
             src="/images/logo-light.svg"
             alt="logo"

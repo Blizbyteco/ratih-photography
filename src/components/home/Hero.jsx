@@ -20,7 +20,7 @@ const Hero = () => {
       <section className="min-h-screen w-full fixed left-0 top-0 z-10">
         <div
           className="absolute inset-0 bg-cover bg-no-repeat bg-right"
-          style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
+          style={{ backgroundImage: "url('/images/hero-bg.jpeg')" }}
         />
         <div className="absolute inset-0 bg-black/75" />
         <div className="absolute z-10 bottom-[10%] left-0 w-full">

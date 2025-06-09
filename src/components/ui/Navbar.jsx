@@ -200,8 +200,10 @@ export default function Navbar() {
           </button>
         </div>
 
-        <div className="mt-[10%]">
-          <UnderlinedTextReveal url="/" text="Galeri" state={isActive} />
+        <div className="mt-[10%] flex flex-col gap-y-14">
+          <UnderlinedTextReveal url="/gallery" text="Galeri" state={isActive} />
+          <UnderlinedTextReveal url="/service" text="Layanan" state={isActive} />
+          <UnderlinedTextReveal url="/course" text="Kelas" state={isActive} />
         </div>
       </motion.div>
       {/* fixed content */}

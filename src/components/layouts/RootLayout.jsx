@@ -26,9 +26,9 @@ export default function RootLayout() {
     <>
       <Navbar />
       <AnimatePresence>
-        {/* {showLoader && (
+        {showLoader && (
           <PageLoader animationCompleteCallback={onAnimationComplete} />
-        )} */}
+        )}
         <Outlet />
       </AnimatePresence>
     </>

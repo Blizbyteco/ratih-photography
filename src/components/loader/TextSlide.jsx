@@ -41,7 +41,7 @@ export default function TextSlide({ text }) {
   }
 
   return (
-    <div className="relative w-[20em] h-[100px] overflow-y-hidden overflow-x-visible">
+    <div className="relative w-[20em] h-[100px] overflow-y-hidden overflow-x-visible font-[Lora]">
             <motion.h1 
             variants={textVariants.first}
             initial="initial"
