@@ -33,7 +33,7 @@ const Hero = () => {
                 custom={0}
                 className="text-white text-xl sm:text-4xl font-normal py-0 sm:py-2"
               >
-                Kami Menghadirkan visual yang menggugah
+                Kami Menghadirkan visual yang menggugah selara
               </motion.h1>
             </div>
 
@@ -45,7 +45,7 @@ const Hero = () => {
                 custom={1}
                 className="text-white text-xl sm:text-4xl font-normal py-0 sm:py-2"
               >
-                dan selaras dengan cita rasa serta visi brand Anda.
+                dan membantu meningkatkan visi brand anda.
               </motion.h1>
             </div>
           </div>
