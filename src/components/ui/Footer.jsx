@@ -25,9 +25,9 @@ const Footer = () => {
         <div className="flex flex-col">
           <p className="text-sm">(NAVIGATION)</p>
           <div className="mt-4 space-y-0 sm:space-y-4">
-            <TextSlide  text="Galeri" />
-            <TextSlide text="Layanan" />
-            <TextSlide text="Kelas" />
+            <TextSlide to="/gallery" text="Galeri" />
+            <TextSlide to="/service" text="Layanan" />
+            <TextSlide to="/course" text="Kelas" />
             <TextSlide text="Hubungi Kami" />
           </div>
         </div>

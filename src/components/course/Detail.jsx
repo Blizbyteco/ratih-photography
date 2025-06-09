@@ -4,14 +4,14 @@ export default function Detail() {
   const DataKelas = [
     {
       title: "Online",
-      price: "Rp 100.000 / Bulan",
-      features: ["Pembelajaran Secara langsung", "Group WhatsApp"],
+      price: "Rp 100.000 / 3 Hari",
+      features: ["Group WhatsApp", "Tips dan Trik Fotografi", "Lighting & Editing", "Materi PDF"],
       text: "Daftar Sekarang",
     },
     {
       title: "Offline",
-      price: "Rp 250.000 / Bulan",
-      features: ["Lighting & Editing", "Studi kasus"],
+      price: "Rp 250.000 / 1 Hari",
+      features: ["Pembelajaran Secara langsung / Tatap muka", "Tips dan Trik Fotografi", "Lighting & Editing", "Materi PDF"],
       text: "Daftar Sekarang",
     },
   ];
