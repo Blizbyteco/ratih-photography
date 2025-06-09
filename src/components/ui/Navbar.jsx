@@ -92,10 +92,22 @@ export default function Navbar() {
 
     if (isActive) {
       document.body.style.overflow = "hidden";
+      
     } else {
       document.body.style.overflow = "initial";
     }
   }, [isActive]);
+
+
+
+  useEffect(() => {
+    if (isActive) {
+      setIsActive(true)
+      
+    } else {
+      setIsActive(false)
+    }
+  }, [location.pathname])
 
   return (
     <>
@@ -183,9 +195,9 @@ export default function Navbar() {
         variants={backgroundVariants}
         initial="initial"
         animate={isActive ? "animate" : "initial"}
-        className="fixed min-w-full top-0 left-0 bg-white z-60 overflow-hidden"
+        className="fixed min-w-full top-0 left-0 bg-white z-60 overflow-hidden container"
       >
-        <div className="max-w-[1200px] mx-auto flex justify-between items-center py-8">
+        <div className="max-w-[1200px] mx-auto flex justify-between items-center py-8 px-4 md:px-0">
           <img
             src="/images/logo-long-dark.png"
             alt="logo"
