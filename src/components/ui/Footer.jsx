@@ -27,7 +27,7 @@ const Footer = () => {
           <div className="mt-4 space-y-0 sm:space-y-4">
             <TextSlide text="Galeri" />
             <TextSlide text="Layanan" />
-            <TextSlide text="Kursus" />
+            <TextSlide text="Kelas" />
             <TextSlide text="Hubungi Kami" />
           </div>
         </div>
