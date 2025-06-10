@@ -43,10 +43,10 @@ export default function Detail() {
 
   return (
     <section className="col-span-2 bg-black items-center justify-center pt-50 flex flex-col">
-      <h1 className="text-6xl font-bold text-white text-center max-w-250">
+      <h1 className="text-3xl md:text-6xl font-bold text-white text-center max-w-250">
         Tampil Keren Bareng Paket Eksklusif
       </h1>
-      <p className=" text-gray-400 text-xl mt-8">
+      <p className=" text-gray-400 mt-8 text-center text-sm md:text-xl">
         Upgrade Tampilan Produkmu dengan Paket Foto Eksklusif dari kami!
       </p>
 
