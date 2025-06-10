@@ -2,12 +2,9 @@ import React from "react";
 import TextSlide from "@/components/ui/TextSlide";
 import LabeledText from "@/components/ui/LabeledText";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { getCurrentTime, getStatusShop } from "../../utils/time";
 
 const Footer = () => {
-  const time = new Date();
-
-  const hour = time.getHours();
-  const minute = time.getMinutes();
 
   return (
     <footer className="border-t border-gray-400 pt-18 pb-4 z-20 w-full min-h-[120vh] sm:min-h-screen bg-black text-white relative">
@@ -98,7 +95,7 @@ const Footer = () => {
             © 2025 Blizbyteco, All Right Reserved
           </p>
           <p className="font-medium text-white text-xs sm:text-sm">
-            22:00 - WE ARE CLOSED
+            {getCurrentTime()} - {getStatusShop() ? "WE ARE OPENED" : "WE ARE CLOSED"}
           </p>
         </div>
       </div>
