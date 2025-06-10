@@ -98,17 +98,6 @@ export default function Navbar() {
     }
   }, [isActive]);
 
-
-
-  useEffect(() => {
-    if (isActive) {
-      setIsActive(true)
-      
-    } else {
-      setIsActive(false)
-    }
-  }, [location.pathname])
-
   return (
     <>
       <motion.div
@@ -120,11 +109,11 @@ export default function Navbar() {
         } left-0 top-0 w-full z-50`}
       >
         <div className="max-w-[1200px] mx-auto flex justify-between items-center py-4 px-6">
-          <Link to="/">
+          <Link  to="/">
             <img
               src="/images/logo-long-light.svg"
               alt="logo"
-              className="aspect-video w-[100px] sm:w-[200px]"
+              className="aspect-video w-[100px] sm:w-[200px] hover:cursor-pointer"
             />
           </Link>
           <div className="hidden sm:flex gap-x-12">
@@ -213,9 +202,9 @@ export default function Navbar() {
         </div>
 
         <div className="mt-[10%] flex flex-col gap-y-14">
-          <UnderlinedTextReveal url="/gallery" text="Galeri" state={isActive} />
-          <UnderlinedTextReveal url="/service" text="Layanan" state={isActive} />
-          <UnderlinedTextReveal url="/course" text="Kelas" state={isActive} />
+          <UnderlinedTextReveal url="/gallery" text="Galeri" state={isActive} onClick={() => setIsActive(false)} />
+          <UnderlinedTextReveal url="/service" text="Layanan" state={isActive} onClick={() => setIsActive(false)}/>
+          <UnderlinedTextReveal url="/course" text="Kelas" state={isActive} onClick={() => setIsActive(false)}/>
         </div>
       </motion.div>
       {/* fixed content */}
