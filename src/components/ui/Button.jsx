@@ -1,7 +1,7 @@
 import { easeIn, motion } from "motion/react";
 import React, { useState } from "react";
 
-export default function Button({ text, className, groupHovered=false }) {
+export default function Button({ text, className, onClick, groupHovered=false}) {
   const [parentHovered, setParentHovered] = useState(groupHovered);
 
   const textVariants = {
@@ -51,6 +51,7 @@ export default function Button({ text, className, groupHovered=false }) {
       className={`rounded-full flex gap-x-4 items-center bg-white w-max px-5 py-3 hover:cursor-pointer overflow-y-hidden min-w-[220px] ${className} relative overflow-hidden`}
       onHoverStart={!groupHovered ? () => setParentHovered(true) : ''}
       onHoverEnd={!groupHovered ? () => setParentHovered(false) : ''}
+      onClick={onClick}
     >
       <div className="relative w-max max-h-[20px] overflow-y-hidden bg-white">
         <motion.p

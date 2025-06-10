@@ -9,6 +9,10 @@ export default function PricingCard({ title, price, features, text }) {
 
   const [hovered, setHovered] = useState(false)
 
+  const clickHandler = () => {
+    window.location.href = `https://wa.me/+6281939334000`
+  }
+
   return (
     <motion.div
       className=" py-12 px-4 border-[0.5px] border-gray-800 rounded-md bg-blur backdrop-blur-xl  bg-radial-[at_center_center] from-amber-500/20 from-20% to-black to-90% hover:shadow-[2px_4px_6px_1px] hover:shadow-amber-500/60 hover:cursor-pointer transition-shadow duration-500 ease-in hover:transition-shadow hover:duration-500 hover:ease-out"
@@ -25,7 +29,7 @@ export default function PricingCard({ title, price, features, text }) {
           </div>
         ))}
       </div>
-      <Button className="mt-10" text={text} groupHovered={hovered} />
+      <Button className="mt-10" text={text} groupHovered={hovered} onClick={clickHandler}/>
     </motion.div>
   );
 }
