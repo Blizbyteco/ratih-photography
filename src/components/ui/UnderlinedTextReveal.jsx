@@ -1,8 +1,8 @@
 import { delay } from "motion";
 import { easeIn, easeOut, motion } from "motion/react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export default function UnderlinedTextReveal({ text, url, state }) {
+export default function UnderlinedTextReveal({ text, url, state, onClick }) {
   const variants = {
     container: {
       initial: {
@@ -42,8 +42,16 @@ export default function UnderlinedTextReveal({ text, url, state }) {
     },
   };
 
+
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    onClick()
+    navigate(url)
+  }
+
   return (
-    <Link to={url}>
+    <button onClick={handleClick}>
       <motion.div
         variants={variants.container}
         initial="initial"
@@ -61,6 +69,6 @@ export default function UnderlinedTextReveal({ text, url, state }) {
           </motion.h1>
         </div>
       </motion.div>
-    </Link>
+    </button>
   );
 }
