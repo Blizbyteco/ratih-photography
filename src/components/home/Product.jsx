@@ -14,7 +14,7 @@ const Product = () => {
         <h2 className="text-5xl sm:text-8xl font-semibold text-right">06</h2>
       </div>
 
-      <div className="grid grid-cols-2 px-8 py-12 gap-x-6 sm:gap-y-12 gap-y-8 sm:gap-x-0">
+      <div className="flex overflow-x-autos px-8 py-12 gap-x-12">
         <ImageCursorScale url="/images/implement-1.jpeg" cursorText="Risoles" />
         <ImageCursorScale
           url="/images/implement-2.jpeg"
