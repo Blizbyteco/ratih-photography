@@ -42,7 +42,7 @@ export default function Detail() {
   ];
 
   return (
-    <section className="col-span-2 bg-black items-center justify-center pt-50 flex flex-col">
+    <section className="col-span-2 bg-black items-center justify-center py-50 flex flex-col gap-y-36">
       <h1 className="text-3xl md:text-6xl font-bold text-white text-center max-w-250">
         Tampil Keren Bareng Paket Eksklusif
       </h1>
@@ -51,17 +51,52 @@ export default function Detail() {
       </p>
 
       {/* Grid Paket */}
-      <div className="grid md:grid-cols-3  gap-5 px-4 py-32">
-        {dataPaket.map((paket, index) => (
-          <PricingCard
-            key={index}
-            title={paket.title}
-            price={paket.price}
-            features={paket.features}
-            text={paket.text}
-          />
-        ))}
+
+      <div className="space-y-8">
+        <h1 className="text-white text-center md:text-3xl font-regular">FOOD & BEVEREGES</h1>
+        <div className="grid md:grid-cols-3 gap-5 px-4">
+          {dataPaket.map((paket, index) => (
+            <PricingCard
+              key={index}
+              title={paket.title}
+              price={paket.price}
+              features={paket.features}
+              text={paket.text}
+            />
+          ))}
+        </div>
       </div>
+      <div className="space-y-8">
+        <h1 className="text-white text-center md:text-3xl font-regular">GROUPIE</h1>
+        <div className="grid md:grid-cols-3 gap-5 px-4">
+          {dataPaket.map((paket, index) => (
+            <PricingCard
+              key={index}
+              title={paket.title}
+              price={paket.price}
+              features={paket.features}
+              text={paket.text}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="space-y-8">
+        <h1 className="text-white text-center md:text-3xl font-regular">ON THE SPOT</h1>
+        <div className="grid md:grid-cols-3 gap-5 px-4">
+          {dataPaket.map((paket, index) => (
+            <PricingCard
+              key={index}
+              title={paket.title}
+              price={paket.price}
+              features={paket.features}
+              text={paket.text}
+            />
+          ))}
+        </div>
+      </div>
+
+
+      {/* end */}
     </section>
   );
 }
