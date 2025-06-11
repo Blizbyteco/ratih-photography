@@ -97,6 +97,10 @@ export default function Navbar() {
       document.body.style.overflow = "initial";
     }
   }, [isActive]);
+  
+  const clickHandler = () => {
+    window.location.href = `https://wa.me/+6281939334000`
+  }
 
   return (
     <>
@@ -137,7 +141,7 @@ export default function Navbar() {
               Layanan
             </Link>
           </div>
-          <Button text="Hubungi kami" />
+          <Button text="Hubungi kami" onClick={clickHandler} />
         </div>
       </motion.div>
 
@@ -150,7 +154,7 @@ export default function Navbar() {
             animate={showNavBtn ? "animate" : "initial"}
             custom={1}
           >
-            <Button text="Hubungi kami" />
+            <Button text="Hubungi kami" onClick={clickHandler} />
           </motion.div>
           <motion.button
             variants={fixedNavVariants}

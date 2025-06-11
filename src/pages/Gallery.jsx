@@ -77,7 +77,7 @@ export default function Gallery() {
 
       <section className="w-full min-h-screen sticky top-0 flex justify-center items-center overflow-hidden">
         <div className="absolute bottom-0">
-          <p className="text-lg text-white font-medium">
+          <p className="text-lg text-white font-normal">
             SCROLL KE BAWAH ({percentage}%)
           </p>
         </div>

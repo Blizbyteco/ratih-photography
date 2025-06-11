@@ -8,7 +8,7 @@ const Result = () => {
         <div>
           <img
             className="w-full sm:w-[300px] mt-4"
-            src="/images/example8.jpeg"
+            src="/images/banner.jpg"
             alt="hasil-kami-photo"
           />
           <div className="mt-16 space-y-8">

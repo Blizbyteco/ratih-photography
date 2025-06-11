@@ -2,6 +2,11 @@ import React from "react";
 import Button from "@/components/ui/Button";
 
 const Banner = () => {
+
+  const clickHandler = () => {
+    window.location.href = `https://wa.me/+6281939334000`
+  }
+
   return (
     <section className="relative z-20 w-full min-h-screen bg-black text-white">
       <div className="grid grid-cols-1 sm:grid-cols-3 px-8 sm:px-16 py-32 gap-y-4">
@@ -23,7 +28,7 @@ const Banner = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <Button text="Hubungi Kami" />
+        <Button text="Hubungi Kami" onClick={clickHandler} />
       </div>
     </section>
   );

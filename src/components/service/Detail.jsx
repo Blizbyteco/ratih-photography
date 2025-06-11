@@ -8,10 +8,6 @@ export default function Detail() {
       price: "Rp 65.000",
       features: [
         "5 Foto Produk",
-        "Background Polos (Putih/Hitam)",
-        "Editing Dasar",
-        "Resolusi Siap Upload",
-        "Estimasi: 1 hari kerja",
       ],
       text: "Pesan Sekarang",
     },

@@ -45,17 +45,7 @@ const Footer = () => {
                 />
               }
             />
-            <LabeledText
-              icon={
-                <Icon
-                  icon="material-symbols:alternate-email"
-                  width="16"
-                  height="16"
-                />
-              }
-              title="Email"
-              content="nik.ratih99atgmail.com"
-            />
+
             <LabeledText
               icon={
                 <Icon
