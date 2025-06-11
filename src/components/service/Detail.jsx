@@ -2,10 +2,10 @@ import React from "react";
 import PricingCard from "../ui/PricingCard";
 
 export default function Detail() {
-  const dataPaket = [
+  const foodAndBevereges = [
     {
-      title: "Paket Basic",
-      price: "Rp 250.000",
+      title: "Paket Single",
+      price: "Rp 65.000",
       features: [
         "5 Foto Produk",
         "Background Polos (Putih/Hitam)",
@@ -16,26 +16,63 @@ export default function Detail() {
       text: "Pesan Sekarang",
     },
     {
-      title: "Paket Standart",
-      price: "Rp 500.000",
-      features: [
-        "10 Foto Produk",
-        "2 Konsep background atau properti",
-        "Editing warna Dan pencahayaan",
-        "File High-Res + Web Ready",
-        "Estimasi pengerjaan: 4–5 hari kerja",
-      ],
+      title: "Paket Basic",
+      price: "Rp 110.000",
+      features: ["Dapat 2 Foto Edit", "Maksimal 2 varian"],
       text: "Pesan Sekarang",
     },
     {
-      title: "Paket Premium Branding",
-      price: "Rp 1.200.000",
+      title: "Paket Regular",
+      price: "Rp 150.000",
+      features: ["Dapat 4 Foto Edit", "Maksimal 4 varian"],
+      text: "Pesan Sekarang",
+    },
+    {
+      title: "Paket Special",
+      price: "Rp 225.000",
+      features: ["Dapat 6 Foto Edit", "Maksimal 6 varian"],
+      text: "Pesan Sekarang",
+    },
+  ];
+  const groupie = [
+    {
+      title: "4 Varian",
+      price: "Rp 80.000",
+      features: ["4 Varian"],
+      text: "Pesan Sekarang",
+    },
+    {
+      title: "5 Varian",
+      price: "Rp 150.000",
+      features: ["5 Varian"],
+      text: "Pesan Sekarang",
+    },
+    {
+      title: "6 Varian",
+      price: "Rp 200.000",
+      features: ["6 Varian"],
+      text: "Pesan Sekarang",
+    },
+    {
+      title: "8 Varian",
+      price: "Rp 225.000",
+      features: ["8 Varian"],
+      text: "Pesan Sekarang",
+    },
+  ];
+  const onTheSpot = [
+    {
+      title: "UMKM",
+      price: "Rp 500.000",
+      features: ["Maksimal 15 Foto Produk", "Jumlah varian dalam foto bebas"],
+      text: "Pesan Sekarang",
+    },
+    {
+      title: "Cafe/Resto",
+      price: "Rp 1.500.000",
       features: [
-        "20 Foto Produk",
-        "3 Konsep Styling (flatlay, lifestyle, close-up)",
-        "Properti + Model tangan/pengguna",
-        "Retouching detail & versi sosial media",
-        "Estimasi pengerjaan: 4–5 hari kerja",
+        "Jumlah foto produk mengikuti jumlah menu yang tersedia",
+        "Jumlah varian dalam foto bebas",
       ],
       text: "Pesan Sekarang",
     },
@@ -53,9 +90,11 @@ export default function Detail() {
       {/* Grid Paket */}
 
       <div className="space-y-8">
-        <h1 className="text-white text-center md:text-3xl font-regular">FOOD & BEVEREGES</h1>
+        <h1 className="text-white text-center md:text-3xl font-regular">
+          FOOD & BEVEREGES
+        </h1>
         <div className="grid md:grid-cols-3 gap-5 px-4">
-          {dataPaket.map((paket, index) => (
+          {foodAndBevereges.map((paket, index) => (
             <PricingCard
               key={index}
               title={paket.title}
@@ -67,9 +106,11 @@ export default function Detail() {
         </div>
       </div>
       <div className="space-y-8">
-        <h1 className="text-white text-center md:text-3xl font-regular">GROUPIE</h1>
+        <h1 className="text-white text-center md:text-3xl font-regular">
+          GROUPIE
+        </h1>
         <div className="grid md:grid-cols-3 gap-5 px-4">
-          {dataPaket.map((paket, index) => (
+          {groupie.map((paket, index) => (
             <PricingCard
               key={index}
               title={paket.title}
@@ -81,9 +122,11 @@ export default function Detail() {
         </div>
       </div>
       <div className="space-y-8">
-        <h1 className="text-white text-center md:text-3xl font-regular">ON THE SPOT</h1>
-        <div className="grid md:grid-cols-3 gap-5 px-4">
-          {dataPaket.map((paket, index) => (
+        <h1 className="text-white text-center md:text-3xl font-regular">
+          ON THE SPOT
+        </h1>
+        <div className="grid md:grid-cols-2 gap-5 px-4">
+          {onTheSpot.map((paket, index) => (
             <PricingCard
               key={index}
               title={paket.title}
@@ -94,7 +137,6 @@ export default function Detail() {
           ))}
         </div>
       </div>
-
 
       {/* end */}
     </section>

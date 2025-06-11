@@ -54,7 +54,7 @@ const Footer = () => {
                 />
               }
               title="Email"
-              content="nik.ratih99@gmail.com"
+              content="nik.ratih99atgmail.com"
             />
             <LabeledText
               icon={
