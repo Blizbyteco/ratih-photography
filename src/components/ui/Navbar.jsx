@@ -98,6 +98,13 @@ export default function Navbar() {
     }
   }, [isActive]);
   
+
+  useEffect(() => {
+    if (showNavBtn && location.pathname == "/gallery") {
+      setShowNavBtn(false)
+    }
+  }, [location.pathname])
+
   const clickHandler = () => {
     window.location.href = `https://wa.me/+6281939334000`
   }

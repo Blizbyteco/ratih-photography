@@ -16,19 +16,17 @@ const About = () => {
           alt=""
         />
         <h2 className="text-5xl sm:text-8xl col-span-2  poppins-medium font-semibold max-w-[10ch]">
-          Dalam Lensa Kami
+          Dengan Lensa Kami
         </h2>
 
         <div></div>
         <div className="col-span-3 sm:col-span-2">
           <h2 className="text-md sm:text-lg text-gray-300">
-            Kami memotret makanan untuk menjual rasa. Dari UMKM hingga restoran
-            besar, kami tetap fokus pada esensi. Kami dengarkan dulu, lalu ambil
-            gambar, untuk menciptakan visual yang sesuai dengan brand dan cerita
-            hidangan Anda. Lalu, kami menerjemahkannya ke dalam visual yang
-            menggugah selera. Berbekal pengalaman nyata, kami menciptakan konten
-            yang otentik, menggoda, dan terasa alami, seperti rasa yang ingin
-            Anda hadirkan.
+            Prinsip dari visi dan misi kami adalah membuat produk anda tampil
+            menarik secara visual. Kami pastikan setiap gambar memiliki kualitas
+            tinggi dan menarik sehingga meninggalkan kesan yang mendalam. Dan
+            kami juga menghadirkan kehangatan pada setiap gambar produk anda
+            untuk meningkatkan citra brand anda.
           </h2>
           <Button text="Pelajari Lebih Lanjut" className="my-8" />
         </div>

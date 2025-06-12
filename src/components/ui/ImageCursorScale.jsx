@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ImageCursorScale({ url }) {
   return (
-    <div className="overflow-hidden group w-full sm:w-[90%]">
+    <div className="overflow-hidden group max-w-[350px] sm:w-[90%] shrink-0">
       <img
         src={url}
         alt="cursor-image"
