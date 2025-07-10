@@ -125,6 +125,7 @@ export default function Navbar() {
               src="/images/logo-long-light.svg"
               alt="logo"
               className="aspect-video w-[100px] sm:w-[200px] hover:cursor-pointer"
+              loading="lazy"
             />
           </Link>
           <div className="hidden sm:flex gap-x-12">
@@ -202,6 +203,7 @@ export default function Navbar() {
             src="/images/logo-long-dark.png"
             alt="logo"
             className="w-[200px]"
+            loading="lazy"
           />
 
           <button

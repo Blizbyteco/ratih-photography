@@ -7,6 +7,7 @@ export default function ImageCursorScale({ url }) {
         src={url}
         alt="cursor-image"
         className="size-full object-cover group-hover:scale-110 transition-transform duration-200 ease-out hover:duration-200 hover:ease-in"
+        loading="lazy"
       />
     </div>
   );

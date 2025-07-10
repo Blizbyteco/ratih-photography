@@ -14,6 +14,7 @@ const About = () => {
           className="aspect-2/3 object-cover"
           src="/images/example1.jpg"
           alt=""
+          loading="lazy"
         />
         <h2 className="text-5xl sm:text-8xl col-span-2  poppins-medium font-semibold max-w-[10ch]">
           Dengan Lensa Kami

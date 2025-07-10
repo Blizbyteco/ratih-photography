@@ -6,6 +6,7 @@ import {
   useTransform,
 } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import { Helmet } from "react-helmet";
 
 const imageToShow = [
   "/images/example.jpg",
@@ -54,51 +55,107 @@ export default function Gallery() {
   }, []);
 
   return (
-    <div ref={ref} className="w-full bg-black h-[500vh] text-white">
-      {previewing && (
-        <motion.div
-          variants={previewVariants}
-          initial="initial"
-          animate="animate"
-          className="fixed left-0 top-0 z-60  w-full min-h-full flex justify-center items-center"
-        >
-          <div
-            onClick={() => setPreviewing(null)}
-            className="absolute left-0 top-0 bg-black/70 w-full min-h-full"
-          />
+    <>
+      <Helmet>
+        <title>Galeri - Nik Ratih Photography</title>
+        <meta
+          name="description"
+          content="Lihat koleksi foto hasil karya Nik Ratih Photography dari berbagai hasil jepretan foto produk."
+        />
+         <meta
+        name="keywords"
+        content="galeri foto, photo gallery, fotography, fotografi, gallery, galeri, hasil foto, foto result"
+      />
 
-          <motion.img
-            className="w-[350px] z-20 object-cover"
-            src={previewing}
-            alt="example"
-          />
-        </motion.div>
-      )}
+        <meta
+          property="og:title"
+          content="Galeri Foto - Nik Ratih Photography"
+        />
+        <meta
+          property="og:description"
+          content="Kumpulan hasil jepretan terbaik kami dari berbagai produk klien kami."
+        />
+        <meta
+          property="og:url"
+          content="https://nikratihphotography.biz.id/gallery"
+        />
+        <meta
+          property="og:image"
+          content="https://nikratihphotography.biz.id/og.png"
+        />
+        <meta property="og:type" content="website" />
 
-      <section className="w-full min-h-screen sticky top-0 flex justify-center items-center overflow-hidden">
-        <div className="absolute bottom-0">
-          <p className="text-lg text-white font-normal">
-            SCROLL KE BAWAH ({percentage}%)
-          </p>
-        </div>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Galeri Nik Ratih Photography" />
+        <meta
+          name="twitter:description"
+          content="Jelajahi hasil karya kami dari berbagai hasil foto produk klien kami."
+        />
+        <meta
+          name="twitter:image"
+          content="https://nikratihphotography.biz.id/og.png"
+        />
+      </Helmet>
 
-        <AnimatePresence>
+      {/* google anlytics */}
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-5YPM7DFKJ1"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || []; function gtag()
+        {dataLayer.push(arguments)}
+        gtag('js', new Date()); gtag('config', 'G-5YPM7DFKJ1');
+      </script>
+      {/* google anlytics */}
+
+      {/* content */}
+      <div ref={ref} className="w-full bg-black h-[500vh] text-white">
+        {previewing && (
           <motion.div
-            className="flex gap-4 absolute top-1/5 sm:top-1/4"
-            style={{ x }}
+            variants={previewVariants}
+            initial="initial"
+            animate="animate"
+            className="fixed left-0 top-0 z-60  w-full min-h-full flex justify-center items-center"
           >
-            {imageToShow.map((url, i) => (
-              <motion.img
-                onClick={() => setPreviewing(url)}
-                key={`image-${i}`}
-                className="w-[350px]"
-                src={url}
-                alt="example"
-              />
-            ))}
+            <div
+              onClick={() => setPreviewing(null)}
+              className="absolute left-0 top-0 bg-black/70 w-full min-h-full"
+            />
+
+            <motion.img
+              className="w-[350px] z-20 object-cover"
+              src={previewing}
+              alt="example"
+            />
           </motion.div>
-        </AnimatePresence>
-      </section>
-    </div>
+        )}
+
+        <section className="w-full min-h-screen sticky top-0 flex justify-center items-center overflow-hidden">
+          <div className="absolute bottom-0">
+            <p className="text-lg text-white font-normal">
+              SCROLL KE BAWAH ({percentage}%)
+            </p>
+          </div>
+
+          <AnimatePresence>
+            <motion.div
+              className="flex gap-4 absolute top-1/5 sm:top-1/4"
+              style={{ x }}
+            >
+              {imageToShow.map((url, i) => (
+                <motion.img
+                  onClick={() => setPreviewing(url)}
+                  key={`image-${i}`}
+                  className="w-[350px]"
+                  src={url}
+                  alt="example"
+                />
+              ))}
+            </motion.div>
+          </AnimatePresence>
+        </section>
+      </div>
+    </>
   );
 }

@@ -1,10 +1,11 @@
+import { Helmet } from "react-helmet";
 import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
     <div className="w-full min-h-screen bg-black">
       <Navbar />
-      <HeroSection/>
+      <HeroSection />
     </div>
   );
 };

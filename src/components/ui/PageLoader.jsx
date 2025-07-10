@@ -35,6 +35,7 @@ export default function PageLoader({ animationCompleteCallback }) {
             src="/images/logo-light.svg"
             alt="logo"
             className="size-[160px]"
+            loading="lazy"
           />
           <TextSlide text="NR"/>
         </div>

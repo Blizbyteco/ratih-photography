@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nikratihphotography.biz.id/sitemap.xml

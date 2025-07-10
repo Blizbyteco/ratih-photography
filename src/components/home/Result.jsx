@@ -10,6 +10,7 @@ const Result = () => {
             className="w-full sm:w-[300px] mt-4"
             src="/images/banner.jpg"
             alt="hasil-kami-photo"
+            loading="lazy"
           />
           <div className="mt-16 space-y-8">
             <UnderlinedText index="01" text="Fotografi Makanan" />
@@ -21,12 +22,11 @@ const Result = () => {
         <div className="col-span-2">
           <h1 className="text-xl sm:text-5xl font-semibold leading-7 sm:leading-15 mt-12">
             Halo, saya Nik Ratih, seorang fotografer makanan yang berbasis di
-            kota Pamekasan, Madura. Saya dapat membantu anda  menampilkan foto produk yang menarik secara visual dan membuat produk anda tampil lebih profesional.
+            kota Pamekasan, Madura. Saya memiliki passion dalam mengabadikan
+            kelezatan makanan melalui lensa kamera.
           </h1>
           <h1 className="text-xl sm:text-5xl font-semibold mt-6 sm:mt-18 leading-7 sm:leading-15">
-            Dengan pengalaman dan keterampilan dalam fotografi makanan, saya
-            dapat membantu Anda menampilkan hidangan Anda dengan cara yang
-            paling menarik.
+            Saya dapat membantu anda  menampilkan foto produk yang menarik secara visual dan membuat produk anda tampil lebih profesional.
           </h1>
         </div>
       </div>
