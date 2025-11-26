@@ -65,9 +65,9 @@ export default function Detail() {
     },
     {
       title: "Cafe/Resto",
-      price: "Rp 1.500.000",
+      price: "Rp 150.00 / Foto",
       features: [
-        "Jumlah foto produk mengikuti jumlah menu yang tersedia",
+        "Minmal 10 Foto",
         "Jumlah varian dalam foto bebas",
       ],
       text: "Pesan Sekarang",
@@ -119,7 +119,7 @@ export default function Detail() {
       </div>
       <div className="space-y-8">
         <h1 className="text-white text-center md:text-3xl font-regular">
-          ON THE SPOT
+          SERVICE VISIT
         </h1>
         <div className="grid md:grid-cols-2 gap-5 px-4">
           {onTheSpot.map((paket, index) => (
